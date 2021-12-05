@@ -1,0 +1,36 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+
+<style>
+    {{styles}}
+</style>
+
+<div
+    class="bg-blue-500 flex w-width bg-center"
+    style="background-image: url('http://pm1.narvii.com/7291/2f7e5a5bb5f36ca1c73c458138aaabd62ae383fdr1-2048-923v2_uhq.jpg'); height: 80vh;"
+>
+    <div class="m-auto">
+
+        <div class="grid grid-cols-1 gap-4">
+            <img src="{{ url_for('static',filename='img/Logo.jpeg') }}" class="h-36 w-36 m-auto" alt="Logo">
+
+            <h1 class="text-5xl xl:text-6xl my-auto font-terraria text-white font-border "> Disfruta la experiencia Sansana en Terraria </h1>
+            <a href="/descarga" class="absolute m-auto text-white mt-5 font-terraria text-white font-border download-anim">
+                DESCARGAR
+            <a>   
+        </div> 
+    </div>
+</div>
+
+<h1 class="font-terraria text-white font-border text-7xl text-center m-10"> NOTAS DE LOS PARCHES </h1>
+
+{% for content in all_patches %}
+    <div class="bg-white m-10 rounded-lg">
+        <div id="markdown" class="m-10 pb-10">
+            {{ content | safe }}
+        </div>
+    </div>
+{% endfor %}
+
+
+{% endblock %}

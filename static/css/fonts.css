@@ -1,0 +1,35 @@
+@font-face {
+    font-family: Terraria;
+    src: url("../fonts/Andy Bold.ttf");
+}
+
+.font-terraria {
+    font-family: Terraria;
+}
+
+.font-border {
+    -webkit-text-stroke-width: 0.09rem;
+    -webkit-text-stroke-color: black;
+}
+
+.download-anim {
+    left: 50%;
+    transform: translate(-50%, 275%);
+    animation-name: download-animation;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes download-animation {
+    0% {
+        font-size: 3rem;
+    }
+
+    50% {
+        font-size: 3.5rem;
+    }
+
+    100% {
+        font-size: 3rem;
+    }
+}
